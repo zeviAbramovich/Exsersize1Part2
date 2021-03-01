@@ -51,13 +51,13 @@ public class Train implements Comparable, Movable {
 
     @Override
     public void move() {
+        currentStation += 1;
         if (currentStation == numberOfStations) {
             Location temp = source;
             source = destination;
             destination = temp;
             currentStation = 0;
         }
-        currentStation += 1;
     }
 
     @Override
